@@ -1,1 +1,11 @@
-hello
+This is my workflow to draw jet l1 turn-on curves using condor
+./Setup_CMSSW.sh
+./Setup_FileLocation.sh to set the path to the Ntuples
+./SubmitJobs.sh, this creates input for condor, Step1.condor, with executable StepProcess.sh (default example runs Plot_Final_datacalo_JEC.C)
+condor_submit Step1.condor launches the jobs, one per ntuple file
+
+Plot_Final_datacalo_JEC.C is an example that runs on data, and calculates trigger efficiency for calo jets. If jec_correct==1, then MC-based corrections are applied to the calo jet pT. The correction files (.txt) must be updated, these two files were 
+derived privately for tests) 
+Plot_Final_MCppcalo_new_JEC.C is an example that runs on pp MC. 
+
+Two plotting example macros: plotResults_PbPb_data.C or plotResults_pp_summaryJec.C 
