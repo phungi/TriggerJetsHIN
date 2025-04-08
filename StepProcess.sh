@@ -16,11 +16,8 @@ echo Input files are: $File
 echo WorkDir is: $WorkDir
 echo output dir is: $Output
 
-
-
-
-root $WorkDir/Plot_Final_datacalo_JEC.C\(\"$File\"\)
+root $WorkDir/Molly_script.cpp\(\"$File\"\)
  
-cp out.root ${Output}/OutHist_PbPb22_data_corr_030_HFcut${ID}.root
+cp out.root ${Output}/${ID}.root
 
 rm out.root

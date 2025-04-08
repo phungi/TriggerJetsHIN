@@ -12,5 +12,27 @@
 #MyInputFiles=/eos/cms/store/group/phys_heavyions/mitaylor/L1MenuStudies/Dijet_TuneCP5_5p36TeV_ppref-pythia8/Dijet_TuneCP5_5p36TeV_ppref_132X_noSub_v1/230822_050931/0000/L1Ntuple*root 
 #MyInputFiles=/eos/cms/store/group/phys_heavyions/mitaylor/L1MenuStudies/Dijet_TuneCP5_5p36TeV_ppref-pythia8/Dijet_TuneCP5_5p36TeV_ppref_132X_chunkyDonut_v1/230822_050823/0000/L1Ntuple*root 
 #MyInputFiles=/eos/cms/store/group/phys_heavyions/mitaylor/L1MenuStudies/Dijet_TuneCP5_5p36TeV_ppref-pythia8/Dijet_TuneCP5_5p36TeV_ppref_132X_phiRing_v1/230822_050707/0000/L1Ntuple*root 
-MyInputFiles=/eos/cms/store/group/phys_heavyions/mitaylor/L1MenuStudies/TestRun2022/MinimumBias/MinBias_HIRun2022A_132X_v1/*/*/MinBias/*/*/L1Ntuple*root
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/mitaylor/L1MenuStudies/TestRun2022/MinimumBias/MinBias_HIRun2022A_132X_v1/*/*/MinBias/*/*/L1Ntuple*root
 #MyInputFiles=/eos/cms/store/group/phys_heavyions/mitaylor/L1MenuStudies/Dijet_TuneCP5_5p36TeV_ppref_132X_phiRing_v3/Dijet_23_TuneCP5_5p36TeV_ppref-pythia8/crab_Dijet_TuneCP5_5p36TeV_ppref_132X_phiRing_v3/230904_173046/0000/L1Ntuple*root 
+
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/mitaylor/L1MenuStudies/PP/Data2023/ZeroBias/*/*/*/*/*/*root
+
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/vavladim/pprefMC_jetSeed1p5LumiBased/Dijet_TuneCP5_5p36TeV_ppref-pythia8/pprefMC_jetSeed1p5LumiBased/240722_194457/0000/*.root
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/vavladim/pprefMC_jetSeed2p5noPhiLumiBased/Dijet_TuneCP5_5p36TeV_ppref-pythia8/pprefMC_jetSeed2p5noPhiLumiBased/240723_074327/0000/*.root
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/vavladim/pprefMC_jetSeed1p5noPhiLumiBased/Dijet_TuneCP5_5p36TeV_ppref-pythia8/pprefMC_jetSeed1p5noPhiLumiBased/240723_132506/0000/*.root
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/vavladim/pprefMC_jetSeed1p5withPhiLumiBased/Dijet_TuneCP5_5p36TeV_ppref-pythia8/pprefMC_jetSeed1p5withPhiLumiBased/240723_132414/0000/*.root
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/vavladim/pprefMC_jetSeed2p0withPhiLumiBased/Dijet_TuneCP5_5p36TeV_ppref-pythia8/pprefMC_jetSeed2p0withPhiLumiBased/240723_132304/0000/*.root
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/vavladim/pprefMC_jetSeed2p0noPhiLumiBased/Dijet_TuneCP5_5p36TeV_ppref-pythia8/pprefMC_jetSeed2p0noPhiLumiBased/240723_131434/0000/*.root
+
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/mitaylor/L1MenuStudies/PP/MC2023/Dijet_TuneCP5_5p36TeV_ppref_132X_chunkyDonut_v3/Dijet_23_TuneCP5_5p36TeV_ppref-pythia8/crab_Dijet_TuneCP5_5p36TeV_ppref_132X_chunkyDonut_v3/230904_173126/0000/*root
+#MyInputFiles=/eos/cms/store/group/phys_heavyions/mitaylor/L1MenuStudies/PbPb/TestRun2022/MinimumBias/MinBias_HIRun2022A_132X_v1/*/*/*/*/*/*root 
+
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/cbaldene/L1HiForest_Dfinder_2023PbPb/HIZeroBias0/L1HiForest_Dfinder_2023PbPb_jetSeed2p5_2024v1_0_0/240928_225905/0000/*
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/rosingh/L1_Hiforest_PbPb_spurious_MB0/HIMinimumBias0/crab_L1_Hiforest_PbPb_spurious_MB0/241031_123332/0000/*
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/rapidValidation_PhysicsPPRefZeroBiasPlusForward0_387590/0000/*
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/lcunquei/run3RapidValidation/PhysicsHIPhysicsRawPrime0_387879/CRAB_UserFiles/crab_PhysicsHIPhysicsRawPrime0_387879/241108_140002/0000/*
+MyInputFiles=/eos/cms/store/group/phys_heavyions/jdlang/run3RapidValidation/PhysicsHIPhysicsRawPrime2_387973/0000/*
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/cbaldene/L1HiForest_Dfinder_2023PbPb/HIZeroBias0/L1HiForest_Dfinder_2023PbPb_jetSeed1p5_noJECnoPUS_2024v1_0_0/240928_225530/0000/*
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/cbaldene/L1HiForest_Dfinder_2023PbPb/HIZeroBias0/L1HiForest_Dfinder_2023PbPb_jetSeed1p5_2024v1_0_0/240928_225803/0000/*
+#Leticia's last dataset
+# MyInputFiles=/eos/cms/store/group/phys_heavyions/mitaylor/L1MenuStudies/TestRun2022/MinimumBias/MinBias_HIRun2022A_132X_v1/*/*/MinBias/*/*/L1Ntuple*root

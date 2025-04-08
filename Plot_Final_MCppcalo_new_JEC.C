@@ -1,6 +1,3 @@
-
-
-
 #include "TFile.h"
 #include "TTreeReader.h"
 #include "TTreeReaderValue.h"
@@ -138,7 +135,6 @@ int Plot_Final_MCppcalo_new_JEC(std::string filename){
     TTreeReaderArray<Float_t> caloeta(emuReader,"caloeta");
     TTreeReaderArray<Float_t> calophi(emuReader,"calophi");
     
-
     TTreeReaderValue<vector<float>> emuJetPt(emuReader, "jetEt");
     TTreeReaderValue<vector<float>> emuJetEta(emuReader, "jetEta");
     TTreeReaderValue<vector<float>> emuJetPhi(emuReader, "jetPhi");

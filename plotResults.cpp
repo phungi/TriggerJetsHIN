@@ -31,7 +31,7 @@ void DrawLatex(Float_t x, Float_t y, Int_t color, const char* text, Float_t text
 }                                                                                                  
 
 
-void plotResults_pp_summaryJec(){
+void plotResults(){
   Int_t ci = 2555;
   // colours and names of the sampleskaaskopPink
   new TColor(++ci, 54/256., 161/256., 24/256.); // dark green
@@ -42,30 +42,28 @@ void plotResults_pp_summaryJec(){
   new TColor(++ci, 242/256., 235/256., 36/256.); // yellow  
   ci = 2555;
   std::vector < Int_t > colours = { ci+1, ci+2, ci+3, ci+4, ci+5, ci+6 };
-// TString fname1="data_23_ppring_newjec.root";
-// TString fname2="data_23_ppring_nonewjec.root";
   TH1::SetDefaultSumw2( );
   gROOT->SetBatch(kTRUE);  
-  std::string out_file = "ZBpp2023_cuts_noJEC.pdf";
+  std::string out_file = "pp_2023_ZB_cuts_JEC.pdf";
   std::vector<TString> triggers = {"L1_SingleJet8_BptxAND","L1_SingleJet16_BptxAND","L1_SingleJet20_BptxAND","L1_SingleJet24_BptxAND","L1_SingleJet28_BptxAND","L1_SingleJet32_BptxAND","L1_SingleJet35_BptxAND","L1_SingleJet40_BptxAND","L1_SingleJet44_BptxAND","L1_SingleJet48_BptxAND","L1_SingleJet50_BptxAND","L1_SingleJet56_BptxAND","L1_SingleJet60_BptxAND","L1_SingleJet80_BptxAND","L1_SingleJet90_BptxAND","L1_SingleJet120_BptxAND","L1_SingleJet140_BptxAND","L1_SingleJet150_BptxAND","L1_SingleJet160_BptxAND","L1_SingleJet170_BptxAND","L1_SingleJet180_BptxAND","L1_SingleJet200_BptxAND"};
-  TCanvas *c11 = new TCanvas();
-  c11->Print( (out_file + "(").c_str(),"pdf");
-// TString fname1="ChunkyRerun.root";
-  // TString fname2="2023_pp_ZeroBias_new_.root";
-  std::cout << "before opening file" << std::endl;
+  TCanvas *c = new TCanvas();
+  c->Print( (out_file + "(").c_str(),"pdf");
+  std::vector<TString> filenames ={"pp2023ZB_cuts_JEC.root"};
+  std::vector<TFile*> files = {};
+  for(size_t i{0}; i < filenames.size(); ++i){
+    TFile *a = new TFile(filenames.at(i),"READ");
+    files.push_back(a);
+  }
 // TFile *input1 = new TFile(fname1, "READ");
-  TFile *input2 = new TFile("/afs/cern.ch/user/v/vavladim/public/rootFolder/pp2023ZB_cuts_noJEC.root","READ");
+  // TFile *input2 = new TFile("2023_pp_ZeroBias.root","READ");
 // TFile *input3;
-  std::cout << "list?" << std::endl;
-  int nbins=14;
-  TH1F *histo[1][22];
-  TH1F *hjet_all[1]; 
-  TH1F *histo2[1][22];
-// TEfficiency *eff[22];
+  std::vector<TH1F*> histo;
+  std::vector<TH1F*> histo2;
+  TH1F *hjet_all;
   gStyle->SetOptTitle(0);
   gStyle->SetOptStat(0);
 // hjet_all[0]=(TH1F*)input1->Get("jetpt_all_calo");
-  hjet_all[0]=(TH1F*)input2->Get("jetpt_all_calo");
+  hjet_all=(TH1F*)input2->Get("jetpt_all_calo");
   hjet_all[0]->GetXaxis()->SetRangeUser(1, 20);
   for(int i=0;i<nbins;i++){
 // histo[0][i]=(TH1F*)input1->Get(Form("jetpt_trig_calo%i",i));
@@ -132,7 +130,7 @@ void plotResults_pp_summaryJec(){
     histo2[0][k]->GetXaxis()->SetTitleSize(0.045);
     histo2[0][k]->GetYaxis()->SetTitleSize(0.045);
     histo2[0][k]->GetYaxis()->SetRangeUser(0,1.25);
-    histo2[0][k]->GetXaxis()->SetRangeUser(0,130);
+    histo2[0][k]->GetXaxis()->SetRangeUser(0,100);
     histo2[0][k]->SetMarkerSize(0.5);
     histo2[0][k]->SetMarkerStyle(20);
     if(k==0){
@@ -147,7 +145,7 @@ void plotResults_pp_summaryJec(){
       histo2[0][k]->Draw("E1");
     else
       histo2[0][k]->Draw("E1,SAME");
-    TLine *l1=new TLine(0, 1, 130, 1);
+    TLine *l1=new TLine(0, 1, 100, 1);
     l1->SetLineColor(kRed);
     l1->Draw("SAME");
 // histo2[1][k]->SetLineColor(2);
@@ -178,5 +176,5 @@ void plotResults_pp_summaryJec(){
 // can->Clear();
     // pad->Clear();
   }
-  c11->Print( (out_file + ")").c_str(),"pdf");
+  c->Print( (out_file + ")").c_str(),"pdf");
 }

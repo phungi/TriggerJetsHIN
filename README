@@ -8,4 +8,8 @@ Plot_Final_datacalo_JEC.C is an example that runs on data, and calculates trigge
 derived privately for tests) 
 Plot_Final_MCppcalo_new_JEC.C is an example that runs on pp MC. 
 
+
 Two plotting example macros: plotResults_PbPb_data.C or plotResults_pp_summaryJec.C 
+
+
+Molly_script is the script I run on condor (or if the dataset is small, you can combine the L1 ntuples and run it locally) -- it is an amalgamation of Leticia's and Molly's scripts (which do pretty much the same thing). It also includes jetID and alternative matching (highest pt within dR instead of closest).

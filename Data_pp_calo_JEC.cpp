@@ -64,7 +64,7 @@ Float_t getDR(Float_t eta1, Float_t phi1, Float_t eta2, Float_t phi2){
   return TMath::Sqrt(theDphi*theDphi + theDeta*theDeta);
 }
 
-int Plot_Final_datacalo_JEC(std::string filename){
+int Data_pp_calo_JEC(std::string filename){
 
   //int bitmin=274;
   // int bitmax=281;
@@ -98,7 +98,7 @@ int Plot_Final_datacalo_JEC(std::string filename){
  
   gSystem->Load("libFWCoreFWLite.so");
   FWLiteEnabler::enable(); 
-  JetCorrectorParameters *L2JetPar=new JetCorrectorParameters("/afs/cern.ch/user/v/vavladim/public/L1trigger/TriggerJetsHIN/ParallelMC_L2Relative_AK4Calo_offline.txt");  
+  JetCorrectorParameters *L2JetPar=new JetCorrectorParameters("/afs/cern.ch/user/v/vavladim/public/L1trigger/TriggerJetsHIN/ParallelMC_L2Relative_AK4Calo_pp_Reco_v0_12-21-2023.txt");  
   vector<JetCorrectorParameters> vPar;
   vPar.push_back(*L2JetPar);
   //Not sure what this is
@@ -128,10 +128,10 @@ int Plot_Final_datacalo_JEC(std::string filename){
   TTreeReaderValue<Int_t> mycent(emuReader,"hiBin");
   TTreeReaderValue<Float_t> myhf(emuReader,"hiHF");
   
-  TTreeReaderValue<Int_t> nref(emuReader,"nref");
-  TTreeReaderArray<Float_t> jtpt(emuReader,"jtpt");
-  TTreeReaderArray<Float_t> jteta(emuReader,"jteta");
-  TTreeReaderArray<Float_t> jtphi(emuReader,"jtphi");
+  // TTreeReaderValue<Int_t> nref(emuReader,"nref");
+  // TTreeReaderArray<Float_t> jtpt(emuReader,"jtpt");
+  // TTreeReaderArray<Float_t> jteta(emuReader,"jteta");
+  // TTreeReaderArray<Float_t> jtphi(emuReader,"jtphi");
 
   TTreeReaderValue<Int_t> ncalo(emuReader,"ncalo");
   TTreeReaderArray<Float_t> calopt(emuReader,"calopt");
